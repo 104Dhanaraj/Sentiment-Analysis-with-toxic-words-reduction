@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analyzer</h1>
+        <form action="/analyze" method="POST">
+            <label for="text_input">Enter Text:</label><br>
+            <textarea id="text_input" name="text_input" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Analyze">
+        </form>
+
+        {% if original_text %}
+        <div class="result">
+            <h2>Results:</h2>
+            <p><strong>Original Text:</strong> {{ original_text }}</p>
+            <p><strong>Cleaned Text:</strong> {{ cleaned_text }}</p>
+            <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
