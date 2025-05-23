@@ -99,11 +99,4 @@ Route: /analyze → Processes text input and displays results.
 
 Executing app.py launches Flask in debug mode for live updates.
 
-Contributing
-
-Want to improve this project? Feel free to submit pull requests or open issues. Your feedback is always welcome.
-
-License
-
-This project is open-source and licensed under the MIT License.
 
